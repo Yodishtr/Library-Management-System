@@ -146,4 +146,9 @@ public class Book {
     public void setBookCopies(List<BookCopy> bookCopies){
         this.bookCopies = bookCopies;
     }
+
+    void addBookCopy(BookCopy bookCopy){
+        bookCopies.add(bookCopy);
+        bookCopy.setBook(this);
+    }
 }
