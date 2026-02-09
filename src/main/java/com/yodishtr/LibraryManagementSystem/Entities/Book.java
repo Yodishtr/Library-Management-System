@@ -32,6 +32,8 @@ public class Book {
 
     private Integer publicationYear;
 
+    private String thumbnail;
+
     private Integer pageCount;
 
     private String language;
@@ -98,6 +100,10 @@ public class Book {
         return bookCopies;
     }
 
+    public String getThumbnail() {
+        return thumbnail;
+    }
+
     // Setters
     public void setId(Long id){
         this.id = id;
@@ -145,6 +151,10 @@ public class Book {
 
     public void setBookCopies(List<BookCopy> bookCopies){
         this.bookCopies = bookCopies;
+    }
+
+    public void setThumbnail(String thumbnail){
+        this.thumbnail = thumbnail;
     }
 
     void addBookCopy(BookCopy bookCopy){

@@ -10,4 +10,21 @@ public class APIProperties {
     private String key;
     private String baseurl;
 
+    // Getters
+    public String getKey() {
+        return key;
+    }
+
+    public String getBaseurl() {
+        return baseurl;
+    }
+
+    // Setters
+    public void setKey(String key){
+        this.key = key;
+    }
+
+    public void setBaseurl(String baseurl){
+        this.baseurl = baseurl;
+    }
 }

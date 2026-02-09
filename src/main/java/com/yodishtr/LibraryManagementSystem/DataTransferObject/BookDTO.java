@@ -15,14 +15,14 @@ public class BookDTO {
 
     @Data
     @JsonIgnoreProperties(ignoreUnknown = true)
-    private static class BookItem{
+    public static class BookItem{
         private String id;
         private VolumeInfo volumeInfo;
     }
 
     @Data
     @JsonIgnoreProperties(ignoreUnknown = true)
-    private static class VolumeInfo{
+    public static class VolumeInfo{
         private String title;
         private List<String> authors;
         private String publisher;
@@ -36,7 +36,7 @@ public class BookDTO {
 
     @Data
     @JsonIgnoreProperties(ignoreUnknown = true)
-    private static class ImageLinks{
+    public static class ImageLinks{
         private String thumbnail;
         private String smallThumbnail;
         private String small;
