@@ -55,7 +55,10 @@ public class BookAPIService {
                     .queryParam("key", apiProperties.getKey())
                     .toUriString();
             BookDTO responseObject = httpClientConfig.getRestTemplate().getForObject(urlRequest, BookDTO.class);
-            return Optional.ofNullable(responseObject);
+            if (responseObject == null){
+                return Optional.empty();
+            }
+            return Optional.of(responseObject);
         } catch (RestClientException e){
             return Optional.empty();
         }
@@ -70,7 +73,10 @@ public class BookAPIService {
                     .queryParam("key", apiProperties.getKey())
                     .toUriString();
             BookDTO responseObject = httpClientConfig.getRestTemplate().getForObject(urlRequest, BookDTO.class);
-            return Optional.ofNullable(responseObject);
+            if (responseObject == null){
+                return Optional.empty();
+            }
+            return Optional.of(responseObject);
         } catch (RestClientException e){
             return Optional.empty();
         }
