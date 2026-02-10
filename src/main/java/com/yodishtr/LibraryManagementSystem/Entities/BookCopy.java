@@ -22,6 +22,10 @@ public class BookCopy {
     @JoinColumn(name = "book_id", nullable = false)
     private Book book;
 
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User currentUser;
+
     @Column(name = "acquisition_date")
     private LocalDateTime acquisitionDate;
 
@@ -62,6 +66,10 @@ public class BookCopy {
         return rentalPrice;
     }
 
+    public User getCurrentUser(){
+        return currentUser;
+    }
+
     // Setters
     public void setId(Long id){
         this.id = id;
@@ -91,5 +99,8 @@ public class BookCopy {
         this.rentalPrice = rentalPrice;
     }
 
+    public void setCurrentUser(User currentUser){
+        this.currentUser = currentUser;
+    }
 
 }

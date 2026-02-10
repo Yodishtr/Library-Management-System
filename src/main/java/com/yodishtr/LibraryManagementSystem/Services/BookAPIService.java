@@ -6,7 +6,6 @@ import com.yodishtr.LibraryManagementSystem.DataTransferObject.BookDTO;
 import com.yodishtr.LibraryManagementSystem.Entities.Book;
 import com.yodishtr.LibraryManagementSystem.Mappers.BookMapper;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.util.UriComponentsBuilder;
 
