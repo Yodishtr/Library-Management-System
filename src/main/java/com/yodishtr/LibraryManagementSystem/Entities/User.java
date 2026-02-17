@@ -51,6 +51,8 @@ public class User {
         this.password = password;
         this.email = email;
         this.role = role;
+        this.fineBalance = 0;
+        this.active = true;
     }
 
     // Getters

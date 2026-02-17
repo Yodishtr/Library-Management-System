@@ -38,4 +38,19 @@ public class UserDetailsAdapter implements UserDetails {
         authorities.add(new SimpleGrantedAuthority("ROLE_" + user.getRole().toString()));
         return authorities;
     }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return user.isActive();
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return user.isActive();
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return user.isActive();
+    }
 }
