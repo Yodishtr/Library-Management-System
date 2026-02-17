@@ -35,7 +35,7 @@ public class User {
 
     private String lastName;
 
-    @OneToMany(mappedBy = "borrowed_books", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "currentUser", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<BookCopy> borrowedBooks = new ArrayList<>();
 
     @Column(nullable = false)

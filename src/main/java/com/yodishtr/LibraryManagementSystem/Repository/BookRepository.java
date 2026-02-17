@@ -31,14 +31,14 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     boolean existsByCategory(String category);
 
     @EntityGraph(attributePaths = {"bookCopies"})
-    Optional<Book> findByIdWithCopies(Long id);
+    Optional<Book> findWithCopiesById(Long id);
 
     @EntityGraph(attributePaths = {"bookCopies"})
-    Optional<Book> findByTitleWithCopies(String title);
+    Optional<Book> findWithCopiesByTitle(String title);
 
     @EntityGraph(attributePaths = {"bookCopies"})
-    Optional<Book> findByIsbnWithCopies(String isbn);
+    Optional<Book> findWithCopiesByIsbn(String isbn);
 
     @EntityGraph(attributePaths = {"bookCopies"})
-    Optional<Book> findByAuthorWithCopies(String author);
+    Optional<Book> findWithCopiesByAuthor(String author);
 }

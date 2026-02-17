@@ -24,8 +24,8 @@ public interface UserRepository extends JpaRepository<User, Long> {
     boolean existsById(Long id);
 
     @EntityGraph(attributePaths = {"borrowedBooks"})
-    Optional<User> findByIdWithBorrowedBooks(Long id);
+    Optional<User> findWithBorrowedBooksById(Long id);
 
     @EntityGraph(attributePaths = {"borrowedBooks"})
-    Optional<User> findByUsernameAndPasswordWithBorrowedBooks(String username, String password);
+    Optional<User> findWithBorrowedBooksByUsernameAndPassword(String username, String password);
 }
