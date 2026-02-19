@@ -15,7 +15,7 @@ public class LoginController {
     @GetMapping
     public String login(@RequestParam(name = "error", required = false) String error, Model model){
         if (error == null) {
-            return "login";
+            return "redirect:/books";
         } else {
             model.addAttribute("error", "Invalid username or password!");
             return "login";

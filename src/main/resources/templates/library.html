@@ -1,0 +1,19 @@
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+    <head>
+        <title>Library</title>
+    </head>
+    <body>
+        <h1>Library Catalog</h1>
+        <div th:each="book:${books}">
+            <img th:src="${book.thumbnail}" alt="Book Cover" style="width: 100px"/>
+            <h3 th:text="${book.title}">Title</h3>
+            <p th:text="${book.author}">Authors</p>
+            <p th:text="${#strings.abbreviate(book.description, 200)}">Description</p>
+            <form th:action="@{/books/{id}/borrow(id=${book.id})}" method="post">
+                <button type="submit">Borrow</button>
+            </form>
+            <hr/>
+        </div>
+    </body>
+
+</html>
